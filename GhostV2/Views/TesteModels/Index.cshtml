@@ -1,0 +1,171 @@
+﻿@model IEnumerable<GhostV2.Models.TesteModel>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.NR_SEQ)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.DT_PROCESSAMENTO)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.CD_CPF_CNPJ)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.SG_TP_PESSOA)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.CD_CPF_CNPJ_PESSOA)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.PF_PJ_PESSOA)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.CD_SOLVERE_OPER)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.DS_PAPEL)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.NM_PESSOA)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.NR_DDD)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.NR_TELEFONE)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.NR_DDD_CELULAR)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.NR_CELULAR)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.NM_EMAIL_SOCIO)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.NM_CONTATO_SOCIO)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.NM_GRUPO_ECONOMICO)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.NM_CONJUGE)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.NM_LOGRADOURO)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.NR_LOGRADOURO)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.NM_COMPLEMENTO)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.NM_BAIRRO)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.NM_CIDADE)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.SG_UF)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.NM_PAIS)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.NR_SEQ)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.DT_PROCESSAMENTO)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.CD_CPF_CNPJ)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.SG_TP_PESSOA)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.CD_CPF_CNPJ_PESSOA)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.PF_PJ_PESSOA)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.CD_SOLVERE_OPER)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.DS_PAPEL)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.NM_PESSOA)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.NR_DDD)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.NR_TELEFONE)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.NR_DDD_CELULAR)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.NR_CELULAR)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.NM_EMAIL_SOCIO)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.NM_CONTATO_SOCIO)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.NM_GRUPO_ECONOMICO)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.NM_CONJUGE)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.NM_LOGRADOURO)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.NR_LOGRADOURO)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.NM_COMPLEMENTO)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.NM_BAIRRO)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.NM_CIDADE)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.SG_UF)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.NM_PAIS)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.NR_CARGA }) |
+            @Html.ActionLink("Details", "Details", new { id=item.NR_CARGA }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.NR_CARGA })
+        </td>
+    </tr>
+}
+
+</table>

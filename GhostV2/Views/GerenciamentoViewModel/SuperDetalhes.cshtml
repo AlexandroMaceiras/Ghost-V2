@@ -1,0 +1,1284 @@
+﻿@model IEnumerable<GhostV2.Models.DetalhesGerenciamentoViewModel>
+
+@{
+    ViewBag.Title = "Detalhes";
+    Layout = "~/Views/Shared/_LayoutDetalhes.cshtml";
+}
+
+@if (ViewBag.Message != null)
+{
+    ViewBag.Message = "Não encontrado nenhum detalhe para este registro.";
+    <center>
+        <h3 class="container">@ViewBag.Message</h3>
+    </center>
+}
+else
+{
+
+<h3 class="container">@ViewBag.Message</h3>
+
+<h4>Detalhes do Cliente:</h4>
+<div class="jumbotronBusca container">
+    <center>
+        <table border="0">
+            <tr>
+                <th class="busca">
+                    CPF ou CNPJ:&nbsp;&nbsp;&nbsp;
+                </th>
+                <th class="detalhes">
+                    <b>@Model.First().CD_CPF_CNPJ</b>&nbsp;&nbsp;&nbsp;
+                </th>
+                <th>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                </th>
+                <th class="busca">
+                    Pessoa:&nbsp;&nbsp;&nbsp;
+                </th>
+                <th class="detalhes">
+                    <b>@Model.First().SG_TP_PESSOA</b>&nbsp;&nbsp;&nbsp;
+                </th>
+            </tr>
+
+            <tr>
+                <th class="busca">
+                    Nome do Cliente:&nbsp;&nbsp;&nbsp;
+                </th>
+                <th class="detalhes">
+                    <b>@Model.First().NM_PESSOA</b>
+                </th>
+                <th>
+                    &nbsp;&nbsp;&nbsp;
+                </th>
+                <th class="busca">
+                    Grupo Econômico:&nbsp;&nbsp;&nbsp;
+                </th>
+                <th class="detalhes">
+                    <b>@Model.First().NM_GRUPO_ECONOMICO</b>&nbsp;&nbsp;&nbsp;
+                </th>
+            </tr>
+            <tr>
+                <th class="busca">
+                    Nome do Logradouro:&nbsp;&nbsp;&nbsp;
+                </th>
+                <th class="detalhes">
+                    <b>@Model.First().NM_LOGRADOURO</b>&nbsp;&nbsp;&nbsp;
+                </th>
+                <th>
+                    &nbsp;&nbsp;&nbsp;
+                </th>
+                <th class="busca">
+                    Número do Logradouro:&nbsp;&nbsp;&nbsp;
+                </th>
+                <th class="detalhes">
+                    <b>@Model.First().NR_LOGRADOURO</b>&nbsp;&nbsp;&nbsp;
+                </th>
+            </tr>
+
+            <tr>
+                <th class="busca">
+                    Complemento:&nbsp;&nbsp;&nbsp;
+                </th>
+                <th class="detalhes">
+                    <b>@Model.First().NM_COMPLEMENTO</b>&nbsp;&nbsp;&nbsp;
+                </th>
+                <th>
+                    &nbsp;&nbsp;&nbsp;
+                </th>
+                <th class="busca">
+                    Bairro:&nbsp;&nbsp;&nbsp;
+                </th>
+                <th class="detalhes">
+                    <b>@Model.First().NM_BAIRRO</b>&nbsp;&nbsp;&nbsp;
+                </th>
+
+            </tr>
+
+            <tr>
+                <th class="busca">
+                    Cidade:&nbsp;&nbsp;&nbsp;
+                </th>
+                <th class="detalhes">
+                    <b>@Model.First().NM_CIDADE</b>&nbsp;&nbsp;&nbsp;
+                </th>
+                <th>
+                    &nbsp;&nbsp;&nbsp;
+                </th>
+                <th class="busca">
+                    Estado:&nbsp;&nbsp;&nbsp;
+                </th>
+                <th class="detalhes">
+                    <b>@Model.First().SG_UF</b>&nbsp;&nbsp;&nbsp;
+                </th>
+            </tr>
+
+            <tr>
+                <th class="busca">
+                    CEP:&nbsp;&nbsp;&nbsp;
+                </th>
+                <th class="detalhes">
+                    <b>@Model.First().CD_CEP</b>&nbsp;&nbsp;&nbsp;
+                </th>
+                <th>
+                    &nbsp;&nbsp;&nbsp;
+                </th>
+                <th class="busca">
+                    País:&nbsp;&nbsp;&nbsp;
+                </th>
+                <th class="detalhes">
+                    <b>@Model.First().NM_PAIS</b>&nbsp;&nbsp;&nbsp;
+                </th>
+            </tr>
+
+            <tr>
+                <th class="busca">
+                    DDD:&nbsp;&nbsp;&nbsp;
+                </th>
+                <th class="detalhes">
+                    <b>@Model.First().NR_DDD</b>&nbsp;&nbsp;&nbsp;
+                </th>
+                <th>
+                    &nbsp;&nbsp;&nbsp;
+                </th>
+                <th class="busca">
+                    Telefone:&nbsp;&nbsp;&nbsp;
+                </th>
+                <th class="detalhes">
+                    <b>@Model.First().NR_TELEFONE</b>&nbsp;&nbsp;&nbsp;
+                </th>
+
+            </tr>
+
+            <tr>
+                <th class="busca">
+                    DDD Cel.:&nbsp;&nbsp;&nbsp;
+                </th>
+                <th class="detalhes">
+                    <b>@Model.First().NR_DDD_CELULAR</b>&nbsp;&nbsp;&nbsp;
+                </th>
+                <th>
+                    &nbsp;&nbsp;&nbsp;
+                </th>
+                <th class="busca">
+                    Celular:&nbsp;&nbsp;&nbsp;
+                </th>
+                <th class="detalhes">
+                    <b>@Model.First().NR_CELULAR</b>&nbsp;&nbsp;&nbsp;
+                </th>
+            </tr>
+            <tr class="dl-horizontal">
+                <th class="busca">
+                    E-mail:&nbsp;&nbsp;&nbsp;
+                </th>
+                <th class="detalhes">
+                    <b>@Model.First().NM_EMAIL</b>&nbsp;&nbsp;&nbsp;
+                </th>
+                <th>
+                    &nbsp;&nbsp;&nbsp;
+                </th>
+                <th class="busca">
+                    Data de Nasc. ou Fundação:&nbsp;&nbsp;&nbsp;
+                </th>
+                <th class="detalhes">
+                    <b>@Model.First().DT_NASCIMENTO_OU_FUNDACAO</b>&nbsp;&nbsp;&nbsp;
+                </th>
+
+            </tr>
+
+            <tr>
+                <th class="busca">
+                    Nome do Contato:&nbsp;&nbsp;&nbsp;
+                </th>
+                <th class="detalhes">
+                    <b>@Model.First().NM_CONTATO</b>
+                </th>
+                <th>
+                    &nbsp;&nbsp;&nbsp;
+                </th>
+                <th class="busca">
+                    RG:&nbsp;&nbsp;&nbsp;
+                </th>
+                <th class="detalhes">
+                    <b>@Model.First().NR_RG</b>&nbsp;&nbsp;&nbsp;
+                </th>
+            </tr>
+            <tr>
+                <th class="busca">
+                    Emissor do RG:&nbsp;&nbsp;&nbsp;
+                </th>
+                <th class="detalhes">
+                    <b>@Model.First().NM_EMISSOR_RG</b>&nbsp;&nbsp;&nbsp;
+                </th>
+                <th>
+                    &nbsp;&nbsp;&nbsp;
+                </th>
+                <th class="busca">
+                    Naturalidade:&nbsp;&nbsp;&nbsp;
+                </th>
+                <th class="detalhes">
+                    <b>@Model.First().DS_NATURALIDADE</b>&nbsp;&nbsp;&nbsp;
+                </th>
+            </tr>
+
+            <tr>
+                <th class="busca">
+                    Nacionalidade:&nbsp;&nbsp;&nbsp;
+                </th>
+                <th class="detalhes">
+                    <b>@Model.First().DS_NACIONALIDADE</b>&nbsp;&nbsp;&nbsp;
+                </th>
+                <th>
+                    &nbsp;&nbsp;&nbsp;
+                </th>
+                <th class="busca">
+                    Nome do Pai:&nbsp;&nbsp;&nbsp;
+                </th>
+                <th class="detalhes">
+                    <b>@Model.First().NM_PAI</b>&nbsp;&nbsp;&nbsp;
+                </th>
+
+            </tr>
+
+            <tr>
+                <th class="busca">
+                    Nome da Mãe:&nbsp;&nbsp;&nbsp;
+                </th>
+                <th class="detalhes">
+                    <b>@Model.First().NM_MAE</b>&nbsp;&nbsp;&nbsp;
+                </th>
+                <th>
+                    &nbsp;&nbsp;&nbsp;
+                </th>
+                <th class="busca">
+                    Nome do Conjugue:&nbsp;&nbsp;&nbsp;
+                </th>
+                <th class="detalhes">
+                    <b>@Model.First().NM_CONJUGE</b>&nbsp;&nbsp;&nbsp;
+                </th>
+            </tr>
+
+            <tr>
+                <th class="busca">
+                    Código do Estado Civil:&nbsp;&nbsp;&nbsp;
+                </th>
+                <th class="detalhes">
+                    <b>@Model.First().CD_ESTADO_CIVIL</b>&nbsp;&nbsp;&nbsp;
+                </th>
+                <th>
+                    &nbsp;&nbsp;&nbsp;
+                </th>
+                <th class="busca">
+                    Estado Civil:&nbsp;&nbsp;&nbsp;
+                </th>
+                <th class="detalhes">
+                    <b>@Model.First().DS_ESTADO_CIVIL</b>&nbsp;&nbsp;&nbsp;
+                </th>
+            </tr>
+
+            <tr>
+                <th class="busca">
+                    Data do Cadastro:&nbsp;&nbsp;&nbsp;
+                </th>
+                <th class="detalhes">
+                    <b>@Model.First().DT_CADASTRO</b>&nbsp;&nbsp;&nbsp;
+                </th>
+                <th>
+                    &nbsp;&nbsp;&nbsp;
+                </th>
+                <th class="busca">
+                    Data da Atualização:&nbsp;&nbsp;&nbsp;
+                </th>
+                <th class="detalhes">
+                    <b>@Model.First().DT_ATUALIZACAO</b>&nbsp;&nbsp;&nbsp;
+                </th>
+            </tr>
+        </table>
+    </center>
+</div>
+
+<h4>Detalhes dos Sócios:</h4>
+
+<div class="jumbotronBusca container">
+    <center>
+        <table border="0">
+            @{ var Contador = 0; }
+
+            @foreach (var item in Model)
+            {
+                if (item.NM_PESSOA != null)
+                {
+                    if (Contador >= 1)
+                    {
+                        <tr>
+                            <th class="busca" colspan="100">
+                                <br /><hr />
+                            </th>
+                        </tr>
+                    }
+                    <tr>
+                        <th class="busca">
+                            CPF/CNPJ do Sócio:&nbsp;&nbsp;&nbsp;
+                        </th>
+                        <th class="detalhes">
+                            <b>@Html.DisplayFor(modelItem => item.CD_CPF_CNPJ_SOCIO)</b>&nbsp;&nbsp;&nbsp;
+                        </th>
+                        <th>
+                            &nbsp;&nbsp;&nbsp;
+                        </th>
+                        <th class="busca">
+                            Nome do Sócio:&nbsp;&nbsp;&nbsp;
+                        </th>
+                        <th class="detalhes">
+                            <b>@Html.DisplayFor(modelItem => item.NM_SOCIO)</b>&nbsp;&nbsp;&nbsp;
+                        </th>
+                    </tr>
+
+                    <tr>
+                        <th class="busca">
+                            Tipo de Pessoa:&nbsp;&nbsp;&nbsp;
+                        </th>
+                        <th class="detalhes">
+                            <b>@Html.DisplayFor(modelItem => item.PF_PJ_PESSOA_SOCIO)</b>&nbsp;&nbsp;&nbsp;
+                        </th>
+                        <th>
+                            &nbsp;&nbsp;&nbsp;
+                        </th>
+                        <th class="busca">
+                            Sociedade:&nbsp;&nbsp;&nbsp;
+                        </th>
+                        <th class="detalhes">
+                            <b>@Html.DisplayFor(modelItem => item.DS_PAPEL_SOCIO)</b>&nbsp;&nbsp;&nbsp;
+                        </th>
+                    </tr>
+
+                    <tr>
+                        <th class="busca">
+                            DDD:&nbsp;&nbsp;&nbsp;
+                        </th>
+                        <th class="detalhes">
+                            <b>@Html.DisplayFor(modelItem => item.NR_DDD_SOCIO)</b>&nbsp;&nbsp;&nbsp;
+                        </th>
+                        <th>
+                            &nbsp;&nbsp;&nbsp;
+                        </th>
+                        <th class="busca">
+                            Telefone:&nbsp;&nbsp;&nbsp;
+                        </th>
+                        <th class="detalhes">
+                            <b>@Html.DisplayFor(modelItem => item.NR_TELEFONE_SOCIO)</b>&nbsp;&nbsp;&nbsp;
+                        </th>
+                    </tr>
+
+                    <tr>
+                        <th class="busca">
+                            DDD Celular:&nbsp;&nbsp;&nbsp;
+                        </th>
+                        <th class="detalhes">
+                            <b>@Html.DisplayFor(modelItem => item.NR_DDD_CELULAR_SOCIO)</b>&nbsp;&nbsp;&nbsp;
+                        </th>
+                        <th>
+                            &nbsp;&nbsp;&nbsp;
+                        </th>
+                        <th class="busca">
+                            Celular:&nbsp;&nbsp;&nbsp;
+                        </th>
+                        <th class="detalhes">
+                            <b>@Html.DisplayFor(modelItem => item.NR_CELULAR_SOCIO)</b>&nbsp;&nbsp;&nbsp;
+                        </th>
+                    </tr>
+
+                    <tr>
+                        <th class="busca">
+                            E-mail:&nbsp;&nbsp;&nbsp;
+                        </th>
+                        <th class="detalhes">
+                            <b>@Html.DisplayFor(modelItem => item.NM_EMAIL_SOCIO)</b>&nbsp;&nbsp;&nbsp;
+                        </th>
+                        <th>
+                            &nbsp;&nbsp;&nbsp;
+                        </th>
+                        <th class="busca">
+                            Contato:&nbsp;&nbsp;&nbsp;
+                        </th>
+                        <th class="detalhes">
+                            <b>@Html.DisplayFor(modelItem => item.NM_CONTATO_SOCIO)</b>&nbsp;&nbsp;&nbsp;
+                        </th>
+                    </tr>
+
+                    <tr>
+                        <th class="busca">
+                            Grupo Econômico:&nbsp;&nbsp;&nbsp;
+                        </th>
+                        <th class="detalhes">
+                            <b>@Html.DisplayFor(modelItem => item.NM_GRUPO_ECONOMICO_SOCIO)</b>&nbsp;&nbsp;&nbsp;
+                        </th>
+                        <th>
+                            &nbsp;&nbsp;&nbsp;
+                        </th>
+                        <th class="busca">
+                            Conjugue:&nbsp;&nbsp;&nbsp;
+                        </th>
+                        <th class="detalhes">
+                            <b>@Html.DisplayFor(modelItem => item.NM_CONJUGE_SOCIO)</b>&nbsp;&nbsp;&nbsp;
+                        </th>
+                    </tr>
+
+                    <tr>
+                        <th class="busca">
+                            Logradouro:&nbsp;&nbsp;&nbsp;
+                        </th>
+                        <th class="detalhes">
+                            <b>@Html.DisplayFor(modelItem => item.NM_LOGRADOURO_SOCIO)</b>&nbsp;&nbsp;&nbsp;
+                        </th>
+                        <th>
+                            &nbsp;&nbsp;&nbsp;
+                        </th>
+                        <th class="busca">
+                            Número:&nbsp;&nbsp;&nbsp;
+                        </th>
+                        <th class="detalhes">
+                            <b>@Html.DisplayFor(modelItem => item.NR_LOGRADOURO_SOCIO)</b>&nbsp;&nbsp;&nbsp;
+                        </th>
+                    </tr>
+
+                    <tr>
+                        <th class="busca">
+                            Complemento:&nbsp;&nbsp;&nbsp;
+                        </th>
+                        <th class="detalhes">
+                            <b>@Html.DisplayFor(modelItem => item.NM_COMPLEMENTO_SOCIO)</b>&nbsp;&nbsp;&nbsp;
+                        </th>
+                        <th>
+                            &nbsp;&nbsp;&nbsp;
+                        </th>
+                        <th class="busca">
+                            Bairro:&nbsp;&nbsp;&nbsp;
+                        </th>
+                        <th class="detalhes">
+                            <b>@Html.DisplayFor(modelItem => item.NM_BAIRRO_SOCIO)</b>&nbsp;&nbsp;&nbsp;
+                        </th>
+                    </tr>
+
+                    <tr>
+                        <th class="busca">
+                            Cidade:&nbsp;&nbsp;&nbsp;
+                        </th>
+                        <th class="detalhes">
+                            <b>@Html.DisplayFor(modelItem => item.NM_CIDADE_SOCIO)</b>&nbsp;&nbsp;&nbsp;
+                        </th>
+                        <th>
+                            &nbsp;&nbsp;&nbsp;
+                        </th>
+                        <th class="busca">
+                            UF:&nbsp;&nbsp;&nbsp;
+                        </th>
+                        <th class="detalhes">
+                            <b>@Html.DisplayFor(modelItem => item.SG_UF_SOCIO)</b>&nbsp;&nbsp;&nbsp;
+                        </th>
+                    </tr>
+                    <tr>
+                        <th class="busca">
+                            País:&nbsp;&nbsp;&nbsp;
+                        </th>
+                        <th class="detalhes">
+                            <b>@Html.DisplayFor(modelItem => item.NM_PAIS_SOCIO)</b>&nbsp;&nbsp;&nbsp;
+                        </th>
+                    </tr>
+
+                    <!--Esta é a única forma pois Model.count() conta os registros que vem em branco por causa do left join do SQL que traz mesmo estando em branco -->
+                    Contador = Contador + 1;
+                }
+            }
+            @if (Contador == 0)
+            {
+                <tr>
+                    <th class="detalhes">
+                        <b>Não contém sócios.</b>
+                    </th>
+                </tr>
+            }
+        </table>
+    </center>
+</div>
+
+<h4>Detalhes dos Imóveis:</h4>
+
+<div class="jumbotronBusca container">
+    <center>
+        <table border="0">
+            @{ var Contador2 = 0; }
+
+            @foreach (var item in Model)
+            {
+                if (item.CD_SOLVERE_GARA != null)
+                {
+                    if (Contador2 >= 1)
+                    {
+                        <tr>
+                            <th class="busca" colspan="100">
+                                <br /><hr />
+                            </th>
+                        </tr>
+                    }
+                    @*<tr>
+                        <th class="busca">
+                            DT_PROCESSAMENTO:&nbsp;&nbsp;&nbsp;
+                        </th>
+                        <th class="detalhes">
+                            <b>@Html.DisplayFor(modelItem => item.DT_PROCESSAMENTO)</b>&nbsp;&nbsp;&nbsp;
+                        </th>
+                        <th>
+                            &nbsp;&nbsp;&nbsp;
+                        </th>
+                        <th class="busca">
+                            CD_CHAVE_KOPE_IMOVEIS:&nbsp;&nbsp;&nbsp;
+                        </th>
+                        <th class="detalhes">
+                            <b>@Html.DisplayFor(modelItem => item.CD_CHAVE_KOPE_IMOVEIS)</b>&nbsp;&nbsp;&nbsp;
+                        </th>
+                    </tr>
+
+                    <tr>
+                        <th class="busca">
+                            CD_SOLVERE_GARA:&nbsp;&nbsp;&nbsp;
+                        </th>
+                        <th class="detalhes">
+                            <b>@Html.DisplayFor(modelItem => item.CD_SOLVERE_GARA)</b>&nbsp;&nbsp;&nbsp;
+                        </th>
+                        <th>
+                            &nbsp;&nbsp;&nbsp;
+                        </th>
+                        <th class="busca">
+                            NR_SEQ_GARA:&nbsp;&nbsp;&nbsp;
+                        </th>
+                        <th class="detalhes">
+                            <b>@Html.DisplayFor(modelItem => item.NR_SEQ_GARA)</b>&nbsp;&nbsp;&nbsp;
+                        </th>
+                    </tr>*@
+
+                    <tr>
+                        <th class="busca">
+                            Tipo de Gravame:&nbsp;&nbsp;&nbsp;
+                        </th>
+                        <th class="detalhes">
+                            <b>@Html.DisplayFor(modelItem => item.DS_TP_GRAVAME)</b>&nbsp;&nbsp;&nbsp;
+                        </th>
+                        <th>
+                            &nbsp;&nbsp;&nbsp;
+                        </th>
+                        <th class="busca">
+                            Grau da Hipoteca:&nbsp;&nbsp;&nbsp;
+                        </th>
+                        <th class="detalhes">
+                            <b>@Html.DisplayFor(modelItem => item.CD_GRAU_HIPOTECA)</b>&nbsp;&nbsp;&nbsp;
+                        </th>
+                    </tr>
+
+                    <tr>
+                        <th class="busca">
+                            Número da Matrícula:&nbsp;&nbsp;&nbsp;
+                        </th>
+                        <th class="detalhes">
+                            <b>@Html.DisplayFor(modelItem => item.NR_MATRICULA)</b>&nbsp;&nbsp;&nbsp;
+                        </th>
+                        <th>
+                            &nbsp;&nbsp;&nbsp;
+                        </th>
+                        <th class="busca">
+                            Número do Cartório de Registro:&nbsp;&nbsp;&nbsp;
+                        </th>
+                        <th class="detalhes">
+                            <b>@Html.DisplayFor(modelItem => item.NR_CARTORIO_REGISTRO)</b>&nbsp;&nbsp;&nbsp;
+                        </th>
+                    </tr>
+
+                    <tr>
+                        <th class="busca">
+                            Nome do Cartório de Registro:&nbsp;&nbsp;&nbsp;
+                        </th>
+                        <th class="detalhes">
+                            <b>@Html.DisplayFor(modelItem => item.NM_CARTORIO_REGISTRO)</b>&nbsp;&nbsp;&nbsp;
+                        </th>
+                        <th>
+                            &nbsp;&nbsp;&nbsp;
+                        </th>
+                        <th class="busca">
+                            CEP:&nbsp;&nbsp;&nbsp;
+                        </th>
+                        <th class="detalhes">
+                            <b>@Html.DisplayFor(modelItem => item.CD_CEP_IMOV)</b>&nbsp;&nbsp;&nbsp;
+                        </th>
+                    </tr>
+                    //////////
+                    <tr>
+                        <th class="busca">
+                            Logradouro:&nbsp;&nbsp;&nbsp;
+                        </th>
+                        <th class="detalhes">
+                            <b>@Html.DisplayFor(modelItem => item.NM_LOGRADOURO_IMOV)</b>&nbsp;&nbsp;&nbsp;
+                        </th>
+                        <th>
+                            &nbsp;&nbsp;&nbsp;
+                        </th>
+                        <th class="busca">
+                            Número do Logradouro:&nbsp;&nbsp;&nbsp;
+                        </th>
+                        <th class="detalhes">
+                            <b>@Html.DisplayFor(modelItem => item.NR_LOGRADOURO_IMOV)</b>&nbsp;&nbsp;&nbsp;
+                        </th>
+                    </tr>
+
+                    <tr>
+                        <th class="busca">
+                            Complemento:&nbsp;&nbsp;&nbsp;
+                        </th>
+                        <th class="detalhes">
+                            <b>@Html.DisplayFor(modelItem => item.NM_COMPLEMENTO_IMOV)</b>&nbsp;&nbsp;&nbsp;
+                        </th>
+                        <th>
+                            &nbsp;&nbsp;&nbsp;
+                        </th>
+                        <th class="busca">
+                            Bairro:&nbsp;&nbsp;&nbsp;
+                        </th>
+                        <th class="detalhes">
+                            <b>@Html.DisplayFor(modelItem => item.NM_BAIRRO_IMOV)</b>&nbsp;&nbsp;&nbsp;
+                        </th>
+                    </tr>
+
+                    <tr>
+                        <th class="busca">
+                            Cidade:&nbsp;&nbsp;&nbsp;
+                        </th>
+                        <th class="detalhes">
+                            <b>@Html.DisplayFor(modelItem => item.NM_CIDADE_IMOV)</b>&nbsp;&nbsp;&nbsp;
+                        </th>
+                        <th>
+                            &nbsp;&nbsp;&nbsp;
+                        </th>
+                        <th class="busca">
+                            UF:&nbsp;&nbsp;&nbsp;
+                        </th>
+                        <th class="detalhes">
+                            <b>@Html.DisplayFor(modelItem => item.SG_UF_IMOV)</b>&nbsp;&nbsp;&nbsp;
+                        </th>
+                    </tr>
+
+                    <tr>
+                        <th class="busca">
+                            Tipo de Imóvel:&nbsp;&nbsp;&nbsp;
+                        </th>
+                        <th class="detalhes">
+                            <b>@Html.DisplayFor(modelItem => item.CD_TIPO_IMOVEL)</b>&nbsp;&nbsp;&nbsp;
+                        </th>
+                        <th>
+                            &nbsp;&nbsp;&nbsp;
+                        </th>
+                        <th class="busca">
+                            Valor da Área:&nbsp;&nbsp;&nbsp;
+                        </th>
+                        <th class="detalhes">
+                            <b>@Html.DisplayFor(modelItem => item.VL_AREA)</b>&nbsp;&nbsp;&nbsp;
+                        </th>
+                    </tr>
+
+                    <tr>
+                        <th class="busca">
+                            Número do IPTU:&nbsp;&nbsp;&nbsp;
+                        </th>
+                        <th class="detalhes">
+                            <b>@Html.DisplayFor(modelItem => item.NR_IPTU)</b>&nbsp;&nbsp;&nbsp;
+                        </th>
+                        <th>
+                            &nbsp;&nbsp;&nbsp;
+                        </th>
+                        <th class="busca">
+                            Valor de Registro da Matrícula:&nbsp;&nbsp;&nbsp;
+                        </th>
+                        <th class="detalhes">
+                            <b>@Html.DisplayFor(modelItem => item.VL_REGISTRO_MATRICULA)</b>&nbsp;&nbsp;&nbsp;
+                        </th>
+                    </tr>
+
+                    <tr>
+                        <th class="busca">
+                            Observações:&nbsp;&nbsp;&nbsp;
+                        </th>
+                        <th class="detalhes">
+                            <b>@Html.DisplayFor(modelItem => item.DS_OBSERVACOES_IMOV)</b>&nbsp;&nbsp;&nbsp;
+                        </th>
+                        <th>
+                            &nbsp;&nbsp;&nbsp;
+                        </th>
+                        <th class="busca">
+                            Indicador de Pesquisa Realizada:&nbsp;&nbsp;&nbsp;
+                        </th>
+                        <th class="detalhes">
+                            <b>@Html.DisplayFor(modelItem => item.IC_PESQUISA_REALIZADA)</b>&nbsp;&nbsp;&nbsp;
+                        </th>
+                    </tr>
+
+                    <tr>
+                        <th class="busca">
+                            Detalhes da Pesquisa Realizada:&nbsp;&nbsp;&nbsp;
+                        </th>
+                        <th class="detalhes">
+                            <b>@Html.DisplayFor(modelItem => item.DS_PESQUISA_DETALHES)</b>&nbsp;&nbsp;&nbsp;
+                        </th>
+                        <th>
+                            &nbsp;&nbsp;&nbsp;
+                        </th>
+                        <th class="busca">
+                            Data da Pesquisa Realizada:&nbsp;&nbsp;&nbsp;
+                        </th>
+                        <th class="detalhes">
+                            <b>@Html.DisplayFor(modelItem => item.DT_PESQUISA)</b>&nbsp;&nbsp;&nbsp;
+                        </th>
+                    </tr>
+
+                    <tr>
+                        <th class="busca">
+                            Indicador de Imóvel Formalizado:&nbsp;&nbsp;&nbsp;
+                        </th>
+                        <th class="detalhes">
+                            <b>@Html.DisplayFor(modelItem => item.IC_IMOVEL_FORMALIZADO)</b>&nbsp;&nbsp;&nbsp;
+                        </th>
+                        <th>
+                            &nbsp;&nbsp;&nbsp;
+                        </th>
+                        <th class="busca">
+                            Detalhes do Imóvel Formalizado:&nbsp;&nbsp;&nbsp;
+                        </th>
+                        <th class="detalhes">
+                            <b>@Html.DisplayFor(modelItem => item.DS_IMOVEL_FORMALIZADO)</b>&nbsp;&nbsp;&nbsp;
+                        </th>
+                    </tr>
+                    ////////////////////
+                    <tr>
+                        <th class="busca">
+                            Data do Imóvel Formalizado:&nbsp;&nbsp;&nbsp;
+                        </th>
+                        <th class="detalhes">
+                            <b>@Html.DisplayFor(modelItem => item.DT_IMOVEL_FORMALIZADO)</b>&nbsp;&nbsp;&nbsp;
+                        </th>
+                        <th>
+                            &nbsp;&nbsp;&nbsp;
+                        </th>
+                        <th class="busca">
+                            Indicador do Imóvel Tomado:&nbsp;&nbsp;&nbsp;
+                        </th>
+                        <th class="detalhes">
+                            <b>@Html.DisplayFor(modelItem => item.IC_IMOVEL_TOMADO)</b>&nbsp;&nbsp;&nbsp;
+                        </th>
+                    </tr>
+
+                    <tr>
+                        <th class="busca">
+                            Detalhes do Imóvel Tomado:&nbsp;&nbsp;&nbsp;
+                        </th>
+                        <th class="detalhes">
+                            <b>@Html.DisplayFor(modelItem => item.DS_IMOVEL_TOMADO)</b>&nbsp;&nbsp;&nbsp;
+                        </th>
+                        <th>
+                            &nbsp;&nbsp;&nbsp;
+                        </th>
+                        <th class="busca">
+                            Data do Imóvel Tomado:&nbsp;&nbsp;&nbsp;
+                        </th>
+                        <th class="detalhes">
+                            <b>@Html.DisplayFor(modelItem => item.DT_IMOVEL_TOMADO)</b>&nbsp;&nbsp;&nbsp;
+                        </th>
+                    </tr>
+
+                    <tr>
+                        <th class="busca">
+                            Indicador do Imóvel vendido/baixado:&nbsp;&nbsp;&nbsp;
+                        </th>
+                        <th class="detalhes">
+                            <b>@Html.DisplayFor(modelItem => item.IC_IMOVEL_VENDIDO_BAIXADO)</b>&nbsp;&nbsp;&nbsp;
+                        </th>
+                        <th>
+                            &nbsp;&nbsp;&nbsp;
+                        </th>
+                        <th class="busca">
+                            Detalhes do Imóvel vendido/baixado:&nbsp;&nbsp;&nbsp;
+                        </th>
+                        <th class="detalhes">
+                            <b>@Html.DisplayFor(modelItem => item.DS_IMOVEL_VENDIDO_BAIXADO)</b>&nbsp;&nbsp;&nbsp;
+                        </th>
+                    </tr>
+
+                    <tr>
+                        <th class="busca">
+                            Data do Imóvel vendido/baixado:&nbsp;&nbsp;&nbsp;
+                        </th>
+                        <th class="detalhes">
+                            <b>@Html.DisplayFor(modelItem => item.DT_IMOVEL_VENDIDO_BAIXADO)</b>&nbsp;&nbsp;&nbsp;
+                        </th>
+                        <th>
+                            &nbsp;&nbsp;&nbsp;
+                        </th>
+                        <th class="busca">
+                            Data de Avaliação:&nbsp;&nbsp;&nbsp;
+                        </th>
+                        <th class="detalhes">
+                            <b>@Html.DisplayFor(modelItem => item.DT_AVALIACAO)</b>&nbsp;&nbsp;&nbsp;
+                        </th>
+                    </tr>
+
+                    <tr>
+                        <th class="busca">
+                            Valor da Garantia:&nbsp;&nbsp;&nbsp;
+                        </th>
+                        <th class="detalhes">
+                            <b>@Html.DisplayFor(modelItem => item.VL_GARANTIA)</b>&nbsp;&nbsp;&nbsp;
+                        </th>
+                        <th>
+                            &nbsp;&nbsp;&nbsp;
+                        </th>
+                        <th class="busca">
+                            Valor de Venda Forçada:&nbsp;&nbsp;&nbsp;
+                        </th>
+                        <th class="detalhes">
+                            <b>@Html.DisplayFor(modelItem => item.VL_VENDA_FORCADA)</b>&nbsp;&nbsp;&nbsp;
+                        </th>
+                    </tr>
+                    //////////
+                    <tr>
+                        <th class="busca">
+                            Valor de Venda de Mercado:&nbsp;&nbsp;&nbsp;
+                        </th>
+                        <th class="detalhes">
+                            <b>@Html.DisplayFor(modelItem => item.VL_VENDA_MERCADO)</b>&nbsp;&nbsp;&nbsp;
+                        </th>
+                        <th>
+                            &nbsp;&nbsp;&nbsp;
+                        </th>
+                        <th class="busca">
+                            CPF/CNPJ do Imóvel:&nbsp;&nbsp;&nbsp;
+                        </th>
+                        <th class="detalhes">
+                            <b>@Html.DisplayFor(modelItem => item.CD_CPF_CNPJ_IMOV)</b>&nbsp;&nbsp;&nbsp;
+                        </th>
+                    </tr>
+
+                    <tr>
+                        <th class="busca">
+                            Tipo de Pessoa:&nbsp;&nbsp;&nbsp;
+                        </th>
+                        <th class="detalhes">
+                            <b>@Html.DisplayFor(modelItem => item.SG_TP_PESSOA_IMOV)</b>&nbsp;&nbsp;&nbsp;
+                        </th>
+                    </tr>
+
+                    <!--Esta é a única forma pois Model.count() conta os registros que vem em branco por causa do left join do SQL que traz mesmo estando em branco -->
+                    Contador2 = Contador2 + 1;
+                }
+            }
+            @if (Contador2 == 0)
+            {
+                <tr>
+                    <th class="detalhes">
+                        <b>Não contém imóveis.</b>
+                    </th>
+                </tr>
+            }
+        </table>
+    </center>
+</div>
+
+<h4>Detalhes dos Veículos e Máquinas:</h4>
+
+<div class="jumbotronBusca container">
+    <center>
+        <table border="0">
+            @{ var Contador3 = 0; }
+
+            @foreach (var item in Model)
+            {
+                if (item.CD_SOLVERE_OPER_MAQ != null)
+                {
+                    if (Contador3 >= 1)
+                    {
+                        <tr>
+                            <th class="busca" colspan="100">
+                                <br /><hr />
+                            </th>
+                        </tr>
+                    }
+                    <tr>
+                        <th class="busca">
+                            CPF/CNPJ:&nbsp;&nbsp;&nbsp;
+                        </th>
+                        <th class="detalhes">
+                            <b>@Html.DisplayFor(modelItem => item.CD_CPF_CNPJ_MAQ)</b>&nbsp;&nbsp;&nbsp;
+                        </th>
+                        <th>
+                            &nbsp;&nbsp;&nbsp;
+                        </th>
+                        <th class="busca">
+                            Tipo de Pessoa:&nbsp;&nbsp;&nbsp;
+                        </th>
+                        <th class="detalhes">
+                            <b>@Html.DisplayFor(modelItem => item.SG_TP_PESSOA_MAQ)</b>&nbsp;&nbsp;&nbsp;
+                        </th>
+                    </tr>
+
+                    <tr>
+                        <th class="busca">
+                            Número do Chassi:&nbsp;&nbsp;&nbsp;
+                        </th>
+                        <th class="detalhes">
+                            <b>@Html.DisplayFor(modelItem => item.NR_CHASSI)</b>&nbsp;&nbsp;&nbsp;
+                        </th>
+                        <th>
+                            &nbsp;&nbsp;&nbsp;
+                        </th>
+                        <th class="busca">
+                            Tipo do Chassi:&nbsp;&nbsp;&nbsp;
+                        </th>
+                        <th class="detalhes">
+                            <b>@Html.DisplayFor(modelItem => item.CD_TIPO_CHASSI)</b>&nbsp;&nbsp;&nbsp;
+                        </th>
+                    </tr>
+
+                    <tr>
+                        <th class="busca">
+                            UF do Licenciamento:&nbsp;&nbsp;&nbsp;
+                        </th>
+                        <th class="detalhes">
+                            <b>@Html.DisplayFor(modelItem => item.SG_UF_LICENCIAMENTO)</b>&nbsp;&nbsp;&nbsp;
+                        </th>
+                        <th>
+                            &nbsp;&nbsp;&nbsp;
+                        </th>
+                        <th class="busca">
+                            UF da Placa:&nbsp;&nbsp;&nbsp;
+                        </th>
+                        <th class="detalhes">
+                            <b>@Html.DisplayFor(modelItem => item.SG_UF_PLACA)</b>&nbsp;&nbsp;&nbsp;
+                        </th>
+                    </tr>
+
+                    <tr>
+                        <th class="busca">
+                            Placa:&nbsp;&nbsp;&nbsp;
+                        </th>
+                        <th class="detalhes">
+                            <b>@Html.DisplayFor(modelItem => item.NR_PLACA)</b>&nbsp;&nbsp;&nbsp;
+                        </th>
+                        <th>
+                            &nbsp;&nbsp;&nbsp;
+                        </th>
+                        <th class="busca">
+                            RENAVAM:&nbsp;&nbsp;&nbsp;
+                        </th>
+                        <th class="detalhes">
+                            <b>@Html.DisplayFor(modelItem => item.NR_RENAVAM)</b>&nbsp;&nbsp;&nbsp;
+                        </th>
+                    </tr>
+
+                    <tr>
+                        <th class="busca">
+                            Ano de Fabricação:&nbsp;&nbsp;&nbsp;
+                        </th>
+                        <th class="detalhes">
+                            <b>@Html.DisplayFor(modelItem => item.NR_ANO_FABRICACAO)</b>&nbsp;&nbsp;&nbsp;
+                        </th>
+                        <th>
+                            &nbsp;&nbsp;&nbsp;
+                        </th>
+                        <th class="busca">
+                            Ano do Modelo:&nbsp;&nbsp;&nbsp;
+                        </th>
+                        <th class="detalhes">
+                            <b>@Html.DisplayFor(modelItem => item.NR_ANO_MODELO)</b>&nbsp;&nbsp;&nbsp;
+                        </th>
+                    </tr>
+
+                    <tr>
+                        <th class="busca">
+                            Tipo de Gravame:&nbsp;&nbsp;&nbsp;
+                        </th>
+                        <th class="detalhes">
+                            <b>@Html.DisplayFor(modelItem => item.CD_TP_GRAVAME)</b>&nbsp;&nbsp;&nbsp;
+                        </th>
+                        <th>
+                            &nbsp;&nbsp;&nbsp;
+                        </th>
+                        <th class="busca">
+                            Data de Gravame:&nbsp;&nbsp;&nbsp;
+                        </th>
+                        <th class="detalhes">
+                            <b>@Html.DisplayFor(modelItem => item.DT_GRAVAME)</b>&nbsp;&nbsp;&nbsp;
+                        </th>
+                    </tr>
+
+                    <tr>
+                        <th class="busca">
+                            Data da baixa de Gravame:&nbsp;&nbsp;&nbsp;
+                        </th>
+                        <th class="detalhes">
+                            <b>@Html.DisplayFor(modelItem => item.DT_BAIXA_GRAVAME)</b>&nbsp;&nbsp;&nbsp;
+                        </th>
+                        <th>
+                            &nbsp;&nbsp;&nbsp;
+                        </th>
+                        <th class="busca">
+                            Modelo:&nbsp;&nbsp;&nbsp;
+                        </th>
+                        <th class="detalhes">
+                            <b>@Html.DisplayFor(modelItem => item.DS_MODELO)</b>&nbsp;&nbsp;&nbsp;
+                        </th>
+                    </tr>
+
+                    <tr>
+                        <th class="busca">
+                            Marca:&nbsp;&nbsp;&nbsp;
+                        </th>
+                        <th class="detalhes">
+                            <b>@Html.DisplayFor(modelItem => item.DS_MARCA)</b>&nbsp;&nbsp;&nbsp;
+                        </th>
+                        <th>
+                            &nbsp;&nbsp;&nbsp;
+                        </th>
+                        <th class="busca">
+                            Cor:&nbsp;&nbsp;&nbsp;
+                        </th>
+                        <th class="detalhes">
+                            <b>@Html.DisplayFor(modelItem => item.DS_COR)</b>&nbsp;&nbsp;&nbsp;
+                        </th>
+                    </tr>
+
+                    <tr>
+                        <th class="busca">
+                            Combustível:&nbsp;&nbsp;&nbsp;
+                        </th>
+                        <th class="detalhes">
+                            <b>@Html.DisplayFor(modelItem => item.DS_COMBUSTIVEL)</b>&nbsp;&nbsp;&nbsp;
+                        </th>
+                        <th>
+                            &nbsp;&nbsp;&nbsp;
+                        </th>
+                        <th class="busca">
+                            Descrição de Veículo/Máquina:&nbsp;&nbsp;&nbsp;
+                        </th>
+                        <th class="detalhes">
+                            <b>@Html.DisplayFor(modelItem => item.DS_VEICULO_MAQUINA)</b>&nbsp;&nbsp;&nbsp;
+                        </th>
+                    </tr>
+
+                    <tr>
+                        <th class="busca">
+                            Número de Série:&nbsp;&nbsp;&nbsp;
+                        </th>
+                        <th class="detalhes">
+                            <b>@Html.DisplayFor(modelItem => item.NR_SERIE)</b>&nbsp;&nbsp;&nbsp;
+                        </th>
+                        <th>
+                            &nbsp;&nbsp;&nbsp;
+                        </th>
+                        <th class="busca">
+                            Fabricante:&nbsp;&nbsp;&nbsp;
+                        </th>
+                        <th class="detalhes">
+                            <b>@Html.DisplayFor(modelItem => item.DS_FABRICANTE)</b>&nbsp;&nbsp;&nbsp;
+                        </th>
+                    </tr>
+
+                    <tr>
+                        <th class="busca">
+                            Tipo do Bem:&nbsp;&nbsp;&nbsp;
+                        </th>
+                        <th class="detalhes">
+                            <b>@Html.DisplayFor(modelItem => item.DS_TIPO_BEM)</b>&nbsp;&nbsp;&nbsp;
+                        </th>
+                        <th>
+                            &nbsp;&nbsp;&nbsp;
+                        </th>
+                        <th class="busca">
+                            Observações Gerais:&nbsp;&nbsp;&nbsp;
+                        </th>
+                        <th class="detalhes">
+                            <b>@Html.DisplayFor(modelItem => item.DS_OBSERVACOES_GERAIS_MAQ)</b>&nbsp;&nbsp;&nbsp;
+                        </th>
+                    </tr>
+
+                    <tr>
+                        <th class="busca">
+                            Indicador de Pesquisa Realizada:&nbsp;&nbsp;&nbsp;
+                        </th>
+                        <th class="detalhes">
+                            <b>@Html.DisplayFor(modelItem => item.IC_PESQUISA_REALIZADA)</b>&nbsp;&nbsp;&nbsp;
+                        </th>
+                        <th>
+                            &nbsp;&nbsp;&nbsp;
+                        </th>
+                        <th class="busca">
+                            Detalhes da Pesquisa Realizada:&nbsp;&nbsp;&nbsp;
+                        </th>
+                        <th class="detalhes">
+                            <b>@Html.DisplayFor(modelItem => item.DS_PESQUISA_DETALHES)</b>&nbsp;&nbsp;&nbsp;
+                        </th>
+                    </tr>
+
+                    <tr>
+                        <th class="busca">
+                            Data da Pesquisa Realizada:&nbsp;&nbsp;&nbsp;
+                        </th>
+                        <th class="detalhes">
+                            <b>@Html.DisplayFor(modelItem => item.DT_PESQUISA)</b>&nbsp;&nbsp;&nbsp;
+                        </th>
+                        <th>
+                            &nbsp;&nbsp;&nbsp;
+                        </th>
+                        <th class="busca">
+                            Indicador de Bem Formalizado:&nbsp;&nbsp;&nbsp;
+                        </th>
+                        <th class="detalhes">
+                            <b>@Html.DisplayFor(modelItem => item.IC_BEM_FORMALIZADO)</b>&nbsp;&nbsp;&nbsp;
+                        </th>
+                    </tr>
+
+                    <tr>
+                        <th class="busca">
+                            Detalhes do Bem Formalizado:&nbsp;&nbsp;&nbsp;
+                        </th>
+                        <th class="detalhes">
+                            <b>@Html.DisplayFor(modelItem => item.DS_BEM_FORMALIZADO)</b>&nbsp;&nbsp;&nbsp;
+                        </th>
+                        <th>
+                            &nbsp;&nbsp;&nbsp;
+                        </th>
+                        <th class="busca">
+                            Data do Bem Formalizado:&nbsp;&nbsp;&nbsp;
+                        </th>
+                        <th class="detalhes">
+                            <b>@Html.DisplayFor(modelItem => item.DT_BEM_FORMALIZADO)</b>&nbsp;&nbsp;&nbsp;
+                        </th>
+                    </tr>
+
+                    <tr>
+                        <th class="busca">
+                            Indicador de Bem Tomado:&nbsp;&nbsp;&nbsp;
+                        </th>
+                        <th class="detalhes">
+                            <b>@Html.DisplayFor(modelItem => item.IC_BEM_TOMADO)</b>&nbsp;&nbsp;&nbsp;
+                        </th>
+                        <th>
+                            &nbsp;&nbsp;&nbsp;
+                        </th>
+                        <th class="busca">
+                            Detalhes do Bem Tomado:&nbsp;&nbsp;&nbsp;
+                        </th>
+                        <th class="detalhes">
+                            <b>@Html.DisplayFor(modelItem => item.DS_BEM_TOMADO)</b>&nbsp;&nbsp;&nbsp;
+                        </th>
+                    </tr>
+
+                    <tr>
+                        <th class="busca">
+                            Data do Bem Tomado:&nbsp;&nbsp;&nbsp;
+                        </th>
+                        <th class="detalhes">
+                            <b>@Html.DisplayFor(modelItem => item.DT_BEM_TOMADO)</b>&nbsp;&nbsp;&nbsp;
+                        </th>
+                        <th>
+                            &nbsp;&nbsp;&nbsp;
+                        </th>
+                        <th class="busca">
+                            Indicador do Bem Vendido:&nbsp;&nbsp;&nbsp;
+                        </th>
+                        <th class="detalhes">
+                            <b>@Html.DisplayFor(modelItem => item.IC_BEM_VENDIDO)</b>&nbsp;&nbsp;&nbsp;
+                        </th>
+                    </tr>
+
+                    <tr>
+                        <th class="busca">
+                            Detalhes do Bem Vendido:&nbsp;&nbsp;&nbsp;
+                        </th>
+                        <th class="detalhes">
+                            <b>@Html.DisplayFor(modelItem => item.DS_BEM_VENDIDO)</b>&nbsp;&nbsp;&nbsp;
+                        </th>
+                        <th>
+                            &nbsp;&nbsp;&nbsp;
+                        </th>
+                        <th class="busca">
+                            Data do Bem Vendido:&nbsp;&nbsp;&nbsp;
+                        </th>
+                        <th class="detalhes">
+                            <b>@Html.DisplayFor(modelItem => item.DT_BEM_VENDIDO)</b>&nbsp;&nbsp;&nbsp;
+                        </th>
+                    </tr>
+
+                    <tr>
+                        <th class="busca">
+                            Valor da Garantia:&nbsp;&nbsp;&nbsp;
+                        </th>
+                        <th class="detalhes">
+                            <b>@Html.DisplayFor(modelItem => item.VL_GARANTIA)</b>&nbsp;&nbsp;&nbsp;
+                        </th>
+                        <th>
+                            &nbsp;&nbsp;&nbsp;
+                        </th>
+                        <th class="busca">
+                            Valor Molicar:&nbsp;&nbsp;&nbsp;
+                        </th>
+                        <th class="detalhes">
+                            <b>@Html.DisplayFor(modelItem => item.VL_MOLICAR)</b>&nbsp;&nbsp;&nbsp;
+                        </th>
+                    </tr>
+
+                    <tr>
+                        <th class="busca">
+                            Valor Forçada:&nbsp;&nbsp;&nbsp;
+                        </th>
+                        <th class="detalhes">
+                            <b>@Html.DisplayFor(modelItem => item.VL_FORCADA)</b>&nbsp;&nbsp;&nbsp;
+                        </th>
+                        <th>
+                            &nbsp;&nbsp;&nbsp;
+                        </th>
+                        <th class="busca">
+                            Código Molicar:&nbsp;&nbsp;&nbsp;
+                        </th>
+                        <th class="detalhes">
+                            <b>@Html.DisplayFor(modelItem => item.CD_MOLICAR)</b>&nbsp;&nbsp;&nbsp;
+                        </th>
+                    </tr>
+
+                    <tr>
+                        <th class="busca">
+                            Indicador da Garantia:&nbsp;&nbsp;&nbsp;
+                        </th>
+                        <th class="detalhes">
+                            <b>@Html.DisplayFor(modelItem => item.IC_GARANTIA)</b>&nbsp;&nbsp;&nbsp;
+                        </th>
+                        <th>
+                            &nbsp;&nbsp;&nbsp;
+                        </th>
+                        <th class="busca">
+                            Quantidade de Máquinas:&nbsp;&nbsp;&nbsp;
+                        </th>
+                        <th class="detalhes">
+                            <b>@Html.DisplayFor(modelItem => item.QT_MAQUINAS)</b>&nbsp;&nbsp;&nbsp;
+                        </th>
+                    </tr>
+
+                    <!--Esta é a única forma pois Model.count() conta os registros que vem em branco por causa do left join do SQL que traz mesmo estando em branco -->
+                    Contador3 = Contador3 + 1;
+                }
+            }
+            @if (Contador3 == 0)
+            {
+                <tr>
+                    <th class="detalhes">
+                        <b>Não contém veículos nem máquinas.</b>
+                    </th>
+                </tr>
+            }
+        </table>
+    </center>
+</div>
+
+}

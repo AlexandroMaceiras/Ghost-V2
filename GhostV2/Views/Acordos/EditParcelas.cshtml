@@ -1,0 +1,104 @@
+﻿@model GhostV2.Models.SLV_VW_ACRD_PESQUISAS
+@{
+    ViewBag.Title = "Sobre";
+}
+<br />
+<br />
+<h2 class="container">Editar Acordos: Parcelas</h2>
+
+@using (Html.BeginForm())
+{
+    @Html.AntiForgeryToken()
+
+    <div class="form-horizontal">
+        <h4 class="container">Parcelas do acordo Nº @Html.HiddenFor(model => model.CD_ACORDO) serão editadas agora.</h4>
+        <hr class="container" />
+        @Html.ValidationSummary(true)
+        @Html.HiddenFor(model => model.CD_ACORDO)
+
+        <div class="form-group">
+            <div class=" control-label col-md-3"><b>Código da causa</b></div>
+            @*Html.LabelFor(model => model.CD_CAUSA, new { @class = "control-label col-md-2" })*@
+            <div class="col-md-4">
+                @Html.EditorFor(model => model.CD_CAUSA)
+                @Html.ValidationMessageFor(model => model.CD_CAUSA)
+                @Html.EditorFor(model => model.CD_CPF_CNPJ)
+                @Html.ValidationMessageFor(model => model.CD_CPF_CNPJ)
+                @Html.EditorFor(model => model.CD_SOLVERE_OPER)
+                @Html.ValidationMessageFor(model => model.CD_SOLVERE_OPER)
+                @Html.EditorFor(model => model.DT_ACORDO)
+                @Html.ValidationMessageFor(model => model.DT_ACORDO)
+                @Html.EditorFor(model => model.DT_ULTIMO_ANDAMENTO)
+                @Html.ValidationMessageFor(model => model.DT_ULTIMO_ANDAMENTO)
+            </div>
+        </div>
+
+        <div class="form-group">
+            <div class=" control-label col-md-3"><b>Status do Acordo</b></div>
+            @*Html.LabelFor(model => model.IC_STATUS_ACORDO, new { @class = "control-label col-md-2" })*@
+            <div class="col-md-4">
+                @Html.EditorFor(model => model.IC_STATUS_ACORDO)
+                @Html.ValidationMessageFor(model => model.IC_STATUS_ACORDO)
+                @Html.EditorFor(model => model.NM_CLIENTE)
+                @Html.ValidationMessageFor(model => model.NM_CLIENTE)
+                @Html.EditorFor(model => model.NM_ESCRITORIO_COBRANCA)
+                @Html.ValidationMessageFor(model => model.NM_ESCRITORIO_COBRANCA)
+                @Html.EditorFor(model => model.NM_GESTOR)
+                @Html.ValidationMessageFor(model => model.NM_GESTOR)
+                @Html.EditorFor(model => model.NM_GRUPO_ECONOMICO)
+                @Html.ValidationMessageFor(model => model.NM_GRUPO_ECONOMICO)
+            </div>
+        </div>
+
+        <div class="form-group">
+            <div class=" control-label col-md-3"><b>Número do Contrato</b></div>
+            @*Html.LabelFor(model => model.NR_CONTRATO, new { @class = "control-label col-md-2" })*@
+            <div class="col-md-4">
+                @Html.EditorFor(model => model.NR_CONTRATO)
+                @Html.ValidationMessageFor(model => model.NR_CONTRATO)
+                @Html.EditorFor(model => model.NR_OPERACAO)
+                @Html.ValidationMessageFor(model => model.NR_OPERACAO)bel col-md-2" })*@
+            <div class="col-md-4">
+                @Html.EditorFor(model => model.NR_PROCESSO)
+                @Html.ValidationMessageFor(model => model.NR_PROCESSO)
+                @Html.EditorFor(model => model.NR_SEQ)
+                @Html.ValidationMessageFor(model => model.NR_SEQ)
+                @*@Html.EditorFor(model => model.QT_PARCELAS_PAGAS)
+                @Html.ValidationMessageFor(model => model.QT_PARCELAS_PAGAS)*@
+            </div>
+        </div>
+
+        <div class="form-group">
+            <div class=" control-label col-md-3"><b>Quantidade Parc. Totais</b></div>
+            @*Html.LabelFor(model => model.QT_PARCELAS_TOTAL, new { @class = "control-label col-md-2" })*@
+            <div class="col-md-4">
+                @Html.EditorFor(model => model.QT_PARCELAS_TOTAL)
+                @Html.ValidationMessageFor(model => model.QT_PARCELAS_TOTAL)
+                @Html.EditorFor(model => model.SG_TP_ACORDO)
+                @Html.ValidationMessageFor(model => model.SG_TP_ACORDO)
+                @Html.EditorFor(model => model.SG_TP_INSTRUMENTO)
+                @Html.ValidationMessageFor(model => model.SG_TP_INSTRUMENTO)
+                @Html.EditorFor(model => model.TIPO_PESSOA)
+                @Html.ValidationMessageFor(model => model.TIPO_PESSOA)
+                @Html.EditorFor(model => model.TP_CONTRATO)
+                @Html.ValidationMessageFor(model => model.TP_CONTRATO)
+            </div>
+        </div>
+
+        <div class="form-group">
+            <div class=" control-label col-md-3"><b>valor do Acordo</b></div>
+            @*Html.LabelFor(model => model.TIPO_PESSOA, new { @class = "control-label col-md-2" })*@
+            <div class="col-md-4">
+                @Html.EditorFor(model => model.VL_ACORDO)
+                @Html.ValidationMessageFor(model => model.VL_ACORDO)
+            </div>
+        </div>
+
+        <div class="form-group">
+            <div class="col-md-offset-2 col-md-10">
+                <input type="submit" value="Próximo ->" class="btn btn-default" />
+            </div>
+        </div>
+    </div>
+}
+

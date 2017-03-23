@@ -1,0 +1,273 @@
+﻿@model IEnumerable<GhostV2.Models.SLV_TB_FIN_GARA_IMOVEIS>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.DT_CARGA)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.DT_PROCESSAMENTO)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.CD_CHAVE_KOPE_IMOVEIS)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.CD_SOLVERE_GARA)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.CD_SOLVERE_OPER)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.NR_SEQ_GARA)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.DS_TP_GRAVAME)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.CD_GRAU_HIPOTECA)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.NR_MATRICULA)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.NR_CARTORIO_REGISTRO)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.NM_CARTORIO_REGISTRO)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.CD_CEP)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.NM_LOGRADOURO)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.NR_LOGRADOURO)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.NM_COMPLEMENTO)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.NM_BAIRRO)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.NM_CIDADE)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.SG_UF)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.CD_TIPO_IMOVEL)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.VL_AREA)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.NR_IPTU)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.VL_REGISTRO_MATRICULA)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.DS_OBSERVACOES)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.IC_PESQUISA_REALIZADA)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.DS_PESQUISA_DETALHES)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.DT_PESQUISA)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.IC_IMOVEL_FORMALIZADO)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.DS_IMOVEL_FORMALIZADO)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.DT_IMOVEL_FORMALIZADO)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.IC_IMOVEL_TOMADO)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.DS_IMOVEL_TOMADO)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.DT_IMOVEL_TOMADO)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.IC_IMOVEL_VENDIDO_BAIXADO)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.DS_IMOVEL_VENDIDO_BAIXADO)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.DT_IMOVEL_VENDIDO_BAIXADO)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.DT_AVALIACAO)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.VL_GARANTIA)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.VL_VENDA_FORCADA)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.VL_VENDA_MERCADO)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.CD_CPF_CNPJ)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.SG_TP_PESSOA)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.DT_CARGA)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.DT_PROCESSAMENTO)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.CD_CHAVE_KOPE_IMOVEIS)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.CD_SOLVERE_GARA)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.CD_SOLVERE_OPER)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.NR_SEQ_GARA)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.DS_TP_GRAVAME)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.CD_GRAU_HIPOTECA)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.NR_MATRICULA)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.NR_CARTORIO_REGISTRO)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.NM_CARTORIO_REGISTRO)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.CD_CEP)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.NM_LOGRADOURO)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.NR_LOGRADOURO)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.NM_COMPLEMENTO)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.NM_BAIRRO)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.NM_CIDADE)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.SG_UF)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.CD_TIPO_IMOVEL)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.VL_AREA)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.NR_IPTU)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.VL_REGISTRO_MATRICULA)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.DS_OBSERVACOES)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.IC_PESQUISA_REALIZADA)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.DS_PESQUISA_DETALHES)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.DT_PESQUISA)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.IC_IMOVEL_FORMALIZADO)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.DS_IMOVEL_FORMALIZADO)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.DT_IMOVEL_FORMALIZADO)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.IC_IMOVEL_TOMADO)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.DS_IMOVEL_TOMADO)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.DT_IMOVEL_TOMADO)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.IC_IMOVEL_VENDIDO_BAIXADO)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.DS_IMOVEL_VENDIDO_BAIXADO)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.DT_IMOVEL_VENDIDO_BAIXADO)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.DT_AVALIACAO)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.VL_GARANTIA)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.VL_VENDA_FORCADA)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.VL_VENDA_MERCADO)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.CD_CPF_CNPJ)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.SG_TP_PESSOA)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.NR_CARGA }) |
+            @Html.ActionLink("Details", "Details", new { id=item.NR_CARGA }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.NR_CARGA })
+        </td>
+    </tr>
+}
+
+</table>
